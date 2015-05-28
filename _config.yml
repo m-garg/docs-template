@@ -1,9 +1,9 @@
 ### GENERAL SETTINGS ###
 
 # Site settings
-title: Documentation
-keywords: "Paxcel Technologies"
-description: Documentation for project
+title: <%= projectName %>
+keywords: <%= projectKeywords %>
+description: <%= projectDescription %>
 
 ### Build settings
 markdown: kramdown
@@ -13,10 +13,10 @@ highlighter: pygments
 # Provide full url for linkedin and youtube
 social: 
  - 
-  facebook: Boxupp
-  twitter: Boxupp
-  linkedin: 
-  youtube: 
-  github: BoxUpp/boxupp
+  facebook: <%= socialFacebook %>
+  twitter: <%= socialTwitter %>
+  linkedin: <%= socialLinkedin %>
+  youtube: <%= socialYoutube %>
+  github: <%= socialGithub %>
 
-mail: info@boxupp.com
+mail: <%= mail %>
