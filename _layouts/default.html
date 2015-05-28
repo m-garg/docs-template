@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top #menu">
+{% include header.html %}
+
+
+ <div id="wrapper">
+ 	<!-- Sidebar -->
+     <div id="sidebar-wrapper">
+     	{% include aside.html %}
+   	</div>
+   <!-- /#sidebar-wrapper -->
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                    	 <p class="visible-xs visible-sm">
+                    		<a href="#menu-toggle" class="btn btn-primary btn-xs" id="menu-toggle"><i class="glyphicon glyphicon-chevron-left"></i> Side Menu</a></p>
+                    	{{content}}
+        
+        				{% include footer.html %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+ 
+ 
+ </div>
+    <!-- /#wrapper -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% include js.html %}
+</body>
+</html>

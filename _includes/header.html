@@ -1,0 +1,42 @@
+<header class="navbar-fixed-top">
+  <section class="top-bar" id="jquery-script-menu">
+    <div class="container-fluid"> 
+    	<a href="mailto:{{site.mail}}" class="pull-left call"><i class="fa fa-envelope"></i>{{site.mail}}</a>
+      <ul class="social-icon">
+        {% for key in site.social %}
+        {% if key.facebook %}<li><a href="http://facebook.com/{{key.facebook}}" target="_blank" class="facebook-icon"><i class="fa fa-facebook"></i></a></li>{% endif %}
+        {% if key.twitter %}<li><a href="http://twitter.com/{{key.twitter}}" target="_blank" class="twitter-icon"><i class="fa fa-twitter"></i></a></li>{% endif %}
+        {% if key.linkedin %}<li><a href="{{key.linkedin}}" class="linkedin-icon" target="_blank"><i class="fa fa-linkedin"></i></a></li>{% endif %}
+        {% if key.youtube %}<li><a href="{{key.youtube}}" target="_blank" class="youtube-icon"><i class="fa fa-youtube"></i></a></li>{% endif %}
+        {% if key.github %}<li><a href="https://github.com/{{key.github}}" class="github-icon" target="_blank"><i class="fa fa-github"></i></a></li>{% endif %}
+        {% endfor %}
+      </ul>
+      <div class="clearfix"></div>
+    </div>
+  </section>
+  
+  <!-- Navigation -->
+  <nav class="navbar navbar-default "  role="navigation">
+    <div class="container-fluid">
+      <div class="navbar-header  page-scroll">
+        <button data-target=".navbar-ex1-collapse" data-toggle="collapse" class="navbar-toggle" type="button"> <span class="sr-only"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+        <a href="/" class="navbar-brand page-scroll"><img title="{{site.title}}" alt="logo" src="img/logo.png" class="logo-img-responsive"></a> </div>
+      
+      <!-- Collect the nav links, forms, and other content for toggling -->
+    <!--  <div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
+        <ul class="nav navbar-nav ">--> 
+          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+          
+        <!--  <li> <a href="" class="page-scroll" target="_blank">Introduction</a> </li>
+          <li> <a href="" class="page-scroll" target="_blank">Features</a> </li>
+          <li> <a href="" class="page-scroll" target="_blank">Get Started</a> </li>
+          <li> <a href="" class="page-scroll" target="_blank">Developers</a> </li>
+          <li> <a href="" class="page-scroll" target="_blank">Blog</a> </li>
+          <li> <a title="Case Studies" href="" class="page-scroll" target="_blank"> Case Studies</a></li>
+        </ul>
+      </div>--> 
+      <!-- /.navbar-collapse --> 
+    </div>
+    <!-- /.container --> 
+  </nav>
+</header>

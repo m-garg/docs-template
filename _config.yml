@@ -1,0 +1,22 @@
+### GENERAL SETTINGS ###
+
+# Site settings
+title: Documentation
+keywords: "Paxcel Technologies"
+description: Documentation for project
+
+### Build settings
+markdown: kramdown
+highlighter: pygments
+
+### Social
+# Provide full url for linkedin and youtube
+social: 
+ - 
+  facebook: Boxupp
+  twitter: Boxupp
+  linkedin: 
+  youtube: 
+  github: BoxUpp/boxupp
+
+mail: info@boxupp.com

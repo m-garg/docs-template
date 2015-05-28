@@ -1,0 +1,15 @@
+#jquery-script-menu {
+/*width: 100%;*/
+top: 0;
+left: 0;
+background:#f9f9f9;
+z-index: 999999;
+-webkit-box-sizing:content-box;
+-moz-box-sizing:content-box;
+box-sizing:content-box;
+}
+
+.jquery-script-center {
+margin: 0 auto;
+}
+

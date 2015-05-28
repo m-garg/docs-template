@@ -1,0 +1,159 @@
+
+<!-- jQuery Version 1.11.0 --> 
+<script src="js/jquery-1.11.0.js"></script> 
+<script src="js/scrolling-nav.js"></script> 
+<script src="js/jquery.easing.min.js"></script> 
+<script src="js/bootstrap.min.js"></script> 
+<script src="js/animation.js"></script> 
+<script src="js/boxupp.js"></script> 
+<script src="js/jquery.ticker.js" type="text/javascript"></script>
+
+<script src="js/jquery.scrollupformenu.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/jquery.lockfixed.min.js"></script>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+<script type="text/javascript" src="js/jquery.ui.touch-punch.min.js"></script>
+
+<script type="text/javascript" src="js/facescroll.js">
+/***********************************************
+* FaceScroll custom scrollbar (c) Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+</script>
+
+<script type="text/javascript">
+	jQuery(function(){ // on page DOM load
+	})
+</script>
+
+    <script>
+	 $(document).ready(function() {
+		 var nice = $("html").niceScroll({cursorborder:0});
+	 });
+	 
+		$(function() {			
+			$('#jquery-script-menu').scrollUpMenu({'transitionTime': 200});
+		var viewportHeight = window.innerHeight;	
+			var mainHeigh = $("#page-content-wrapper").height();
+			if(mainHeigh<viewportHeight)
+			{		 
+				 $("footer").css({
+					 'position': 'fixed',					        
+				 	'top': viewportHeight- 80,
+      				'width': 75 + '%'
+    			});
+				}
+				else{$('footer').css('position','relative');}
+		});
+	</script>
+
+<script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100
+      }
+    );
+    wow.init();
+   
+  </script>
+
+  
+  <script>
+(function($) {
+})(jQuery);	
+
+
+
+$(function() {
+    
+
+    /* Options panel */
+    $('.option-header').on('click', function(e) {
+        // stop propagation to prevent the other click handler below
+        // from reclosing the options panel
+        e.stopPropagation();
+        var $target = $(e.currentTarget);
+        $target.parent().toggleClass('closed');
+        $target.find('.fa-angle-down, .fa-angle-up').toggleClass('fa-angle-down fa-angle-up');
+    });
+
+    $('body').on('click', 'header, .section-divider, footer, .content-right', function(e) {
+        $('.option-popup').addClass('closed')
+            .find('.fa-angle-down, .fa-angle-up').toggleClass('fa-angle-down fa-angle-up');
+    });
+
+    
+
+});
+
+ $(document).ready(function() {
+	
+	 $('#MainMenu .panel > a').on('click', function (e) {
+		e.preventDefault();
+
+		if(!$(this).hasClass("active-main")){
+			var lastActive = $(this).closest(".panel").children(".active-main");
+			lastActive.removeClass("active-main");
+			lastActive.next('div').collapse('hide');
+			$(this).addClass("active-main");
+			$(this).next('div').collapse('show');
+
+		}
+
+	});
+    var link = 'Started';	
+    $('a[href="#'+link+'"').trigger('click');
+});
+
+
+// Hide Header on on scroll down
+var didScroll;
+var lastScrollTop = 0;
+var delta = 3;
+//var navbarHeight = $('header').outerHeight();
+
+$(window).scroll(function(event){
+    didScroll = true;
+});
+
+setInterval(function() {
+    if (didScroll) {
+        hasScrolled();
+        didScroll = false;
+    }
+}, 250);
+
+function hasScrolled() {
+    var st = $(this).scrollTop();
+	
+    // Make sure they scroll more than delta
+    if(Math.abs(lastScrollTop - st) <= delta)
+        return;
+    
+    // If they scrolled down and are past the navbar, add class .nav-up.
+    // This is necessary so you never see what is "behind" the navbar.
+    if (st > lastScrollTop){
+        // Scroll Down
+        $('body').removeClass('body-top80').addClass('body-top60');
+    } else {
+        // Scroll Up
+        if(st + $(window).height() < $(document).height()) {
+            $('body').removeClass('body-top60').addClass('body-top80');
+        }
+    }
+    
+    lastScrollTop = st;
+}
+
+</script>
+
+<script>
+    $("#menu-toggle").click(function(e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+    </script>
