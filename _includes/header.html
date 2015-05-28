@@ -1,7 +1,7 @@
 <header class="navbar-fixed-top">
   <section class="top-bar" id="jquery-script-menu">
     <div class="container-fluid"> 
-    	<a href="mailto:{{site.mail}}" class="pull-left call"><i class="fa fa-envelope"></i>{{site.mail}}</a>
+    	{% if site.mail %}<a href="mailto:{{site.mail}}" class="pull-left call"><i class="fa fa-envelope"></i>{{site.mail}}</a>{% endif %}
       <ul class="social-icon">
         {% for key in site.social %}
         {% if key.facebook %}<li><a href="http://facebook.com/{{key.facebook}}" target="_blank" class="facebook-icon"><i class="fa fa-facebook"></i></a></li>{% endif %}
@@ -20,21 +20,9 @@
     <div class="container-fluid">
       <div class="navbar-header  page-scroll">
         <button data-target=".navbar-ex1-collapse" data-toggle="collapse" class="navbar-toggle" type="button"> <span class="sr-only"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-        <a href="/" class="navbar-brand page-scroll"><img title="{{site.title}}" alt="logo" src="img/logo.png" class="logo-img-responsive"></a> </div>
-      
-      <!-- Collect the nav links, forms, and other content for toggling -->
-    <!--  <div class="collapse navbar-collapse navbar-ex1-collapse navbar-right">
-        <ul class="nav navbar-nav ">--> 
-          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-          
-        <!--  <li> <a href="" class="page-scroll" target="_blank">Introduction</a> </li>
-          <li> <a href="" class="page-scroll" target="_blank">Features</a> </li>
-          <li> <a href="" class="page-scroll" target="_blank">Get Started</a> </li>
-          <li> <a href="" class="page-scroll" target="_blank">Developers</a> </li>
-          <li> <a href="" class="page-scroll" target="_blank">Blog</a> </li>
-          <li> <a title="Case Studies" href="" class="page-scroll" target="_blank"> Case Studies</a></li>
-        </ul>
-      </div>--> 
+       <!-- <a href="/" class="navbar-brand page-scroll"><img title="{{site.title}}" alt="logo" src="img/logo.png" class="logo-img-responsive"></a> </div>-->
+       <a class="navbar-brand page-scroll" href="/">{{site.title}}</a>
+
       <!-- /.navbar-collapse --> 
     </div>
     <!-- /.container --> 
