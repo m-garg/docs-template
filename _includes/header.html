@@ -1,14 +1,14 @@
 <header class="navbar-fixed-top">
   <section class="top-bar" id="jquery-script-menu">
     <div class="container-fluid"> 
-    	{% if site.mail %}<a href="mailto:{{site.mail}}" class="pull-left call"><i class="fa fa-envelope"></i>{{site.mail}}</a>{% endif %}
+    	{% if site.email %}<a href="mailto:{{site.email}}" class="pull-left call"><i class="fa fa-envelope"></i>{{site.email}}</a>{% endif %}
       <ul class="social-icon">
         {% for key in site.social %}
         {% if key.facebook %}<li><a href="http://facebook.com/{{key.facebook}}" target="_blank" class="facebook-icon"><i class="fa fa-facebook"></i></a></li>{% endif %}
         {% if key.twitter %}<li><a href="http://twitter.com/{{key.twitter}}" target="_blank" class="twitter-icon"><i class="fa fa-twitter"></i></a></li>{% endif %}
         {% if key.linkedin %}<li><a href="{{key.linkedin}}" class="linkedin-icon" target="_blank"><i class="fa fa-linkedin"></i></a></li>{% endif %}
         {% if key.youtube %}<li><a href="{{key.youtube}}" target="_blank" class="youtube-icon"><i class="fa fa-youtube"></i></a></li>{% endif %}
-        {% if key.github %}<li><a href="https://github.com/{{key.github}}" class="github-icon" target="_blank"><i class="fa fa-github"></i></a></li>{% endif %}
+        {% if key.github %}<li><a href="{{key.github}}" class="github-icon" target="_blank"><i class="fa fa-github"></i></a></li>{% endif %}
         {% endfor %}
       </ul>
       <div class="clearfix"></div>

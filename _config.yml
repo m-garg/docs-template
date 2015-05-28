@@ -19,4 +19,4 @@ social:
   youtube: <%= socialYoutube %>
   github: <%= socialGithub %>
 
-mail: <%= mail %>
+email: <%= email %>
