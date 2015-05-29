@@ -4,7 +4,7 @@
 			<a href="#{{forloop.index}}" class="list-group-item {% for entry in node.urls %}{% if entry.url == page.url %} active-main {% endif %} {% endfor %}" data-toggle="collapse" data-parent="#MainMenu">{{node.sectionTitle}}</a>
 			<div class="collapse {% for entry in node.urls %}{% if entry.url == page.url %} in {% endif %} {% endfor %}" id="{{forloop.index}}">
 				{% for entry in node.urls %}
-					<a href="{{entry.url}}" class="list-group-item {% if entry.url == page.url %} active {% endif %}">{{entry.title}}</a>
+					<a href="{{site.baseurl}}{{entry.url}}" class="list-group-item {% if entry.url == page.url %} active {% endif %}">{{entry.title}}</a>
 				{% endfor %}
 			</div>
 		{% endfor %}
