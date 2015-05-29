@@ -4,7 +4,7 @@
 title: <%= projectName %>
 keywords: <%= projectKeywords %>
 description: <%= projectDescription %>
-baseurl: <%= githubRepoName %>
+baseurl: /<%= githubRepoName %>
 ### Build settings
 markdown: kramdown
 highlighter: pygments
